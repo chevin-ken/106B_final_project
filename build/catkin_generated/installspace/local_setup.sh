@@ -3,7 +3,7 @@
 
 # since this file is sourced either use the provided _CATKIN_SETUP_DIR
 # or fall back to the destination set at configure time
-: ${_CATKIN_SETUP_DIR:=/home/cc/ee106b/sp22/class/ee106b-ace/ros_workspaces/final_project/install}
+: ${_CATKIN_SETUP_DIR:=/home/cc/ee106b/sp22/class/ee106b-aar/ros_workspaces/106B_final_project/install}
 CATKIN_SETUP_UTIL_ARGS="--extend --local"
 . "$_CATKIN_SETUP_DIR/setup.sh"
 unset CATKIN_SETUP_UTIL_ARGS

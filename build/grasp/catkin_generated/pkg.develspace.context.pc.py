@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "grasp"
-PROJECT_SPACE_DIR = "/home/cc/ee106b/sp22/class/ee106b-ace/ros_workspaces/final_project/devel"
+PROJECT_SPACE_DIR = "/home/cc/ee106b/sp22/class/ee106b-aar/ros_workspaces/106B_final_project/devel"
 PROJECT_VERSION = "0.0.0"

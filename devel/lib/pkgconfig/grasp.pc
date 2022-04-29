@@ -1,4 +1,4 @@
-prefix=/home/cc/ee106b/sp22/class/ee106b-ace/ros_workspaces/final_project/devel
+prefix=/home/cc/ee106b/sp22/class/ee106b-aar/ros_workspaces/106B_final_project/devel
 
 Name: grasp
 Description: Description of grasp

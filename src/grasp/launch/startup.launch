@@ -1,0 +1,15 @@
+<launch>
+    <include file="$(find baxter_moveit_config)/launch/demo_baxter.launch">
+    	<arg name="right_electric_gripper" value="true"/>
+    </include>
+
+    <node name="joint_trajectory_action_server"
+                pkg="baxter_interface"
+                type="joint_trajectory_action_server.py">
+    </node>
+
+    <node name="rviz"
+                pkg="rviz"
+                type="rviz">
+    </node>
+</launch>

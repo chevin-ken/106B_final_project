@@ -67,14 +67,14 @@ set(grasp_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(grasp_SOURCE_PREFIX /home/cc/ee106b/sp22/class/ee106b-ace/ros_workspaces/final_project/src/grasp)
-  set(grasp_DEVEL_PREFIX /home/cc/ee106b/sp22/class/ee106b-ace/ros_workspaces/final_project/devel)
+  set(grasp_SOURCE_PREFIX /home/cc/ee106b/sp22/class/ee106b-aar/ros_workspaces/106B_final_project/src/grasp)
+  set(grasp_DEVEL_PREFIX /home/cc/ee106b/sp22/class/ee106b-aar/ros_workspaces/106B_final_project/devel)
   set(grasp_INSTALL_PREFIX "")
   set(grasp_PREFIX ${grasp_DEVEL_PREFIX})
 else()
   set(grasp_SOURCE_PREFIX "")
   set(grasp_DEVEL_PREFIX "")
-  set(grasp_INSTALL_PREFIX /home/cc/ee106b/sp22/class/ee106b-ace/ros_workspaces/final_project/install)
+  set(grasp_INSTALL_PREFIX /home/cc/ee106b/sp22/class/ee106b-aar/ros_workspaces/106B_final_project/install)
   set(grasp_PREFIX ${grasp_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/cc/ee106b/sp22/class/ee106b-ace/ros_workspaces/final_project/install/lib;/scratch/shared/baxter_ws/devel/lib;/opt/ros/kinetic/lib)
+    foreach(path /home/cc/ee106b/sp22/class/ee106b-aar/ros_workspaces/106B_final_project/install/lib;/scratch/shared/baxter_ws/devel/lib;/opt/ros/kinetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

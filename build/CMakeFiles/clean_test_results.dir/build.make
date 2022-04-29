@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/cc/ee106b/sp22/class/ee106b-ace/ros_workspaces/final_project/src
+CMAKE_SOURCE_DIR = /home/cc/ee106b/sp22/class/ee106b-aar/ros_workspaces/106B_final_project/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/cc/ee106b/sp22/class/ee106b-ace/ros_workspaces/final_project/build
+CMAKE_BINARY_DIR = /home/cc/ee106b/sp22/class/ee106b-aar/ros_workspaces/106B_final_project/build
 
 # Utility rule file for clean_test_results.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/cc/ee106b/sp22/class/ee106b-ace/ros_workspaces/final_pr
 include CMakeFiles/clean_test_results.dir/progress.make
 
 CMakeFiles/clean_test_results:
-	/usr/bin/python2 /opt/ros/kinetic/share/catkin/cmake/test/remove_test_results.py /home/cc/ee106b/sp22/class/ee106b-ace/ros_workspaces/final_project/build/test_results
+	/usr/bin/python2 /opt/ros/kinetic/share/catkin/cmake/test/remove_test_results.py /home/cc/ee106b/sp22/class/ee106b-aar/ros_workspaces/106B_final_project/build/test_results
 
 clean_test_results: CMakeFiles/clean_test_results
 clean_test_results: CMakeFiles/clean_test_results.dir/build.make
@@ -71,6 +71,6 @@ CMakeFiles/clean_test_results.dir/clean:
 .PHONY : CMakeFiles/clean_test_results.dir/clean
 
 CMakeFiles/clean_test_results.dir/depend:
-	cd /home/cc/ee106b/sp22/class/ee106b-ace/ros_workspaces/final_project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/cc/ee106b/sp22/class/ee106b-ace/ros_workspaces/final_project/src /home/cc/ee106b/sp22/class/ee106b-ace/ros_workspaces/final_project/src /home/cc/ee106b/sp22/class/ee106b-ace/ros_workspaces/final_project/build /home/cc/ee106b/sp22/class/ee106b-ace/ros_workspaces/final_project/build /home/cc/ee106b/sp22/class/ee106b-ace/ros_workspaces/final_project/build/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/cc/ee106b/sp22/class/ee106b-aar/ros_workspaces/106B_final_project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/cc/ee106b/sp22/class/ee106b-aar/ros_workspaces/106B_final_project/src /home/cc/ee106b/sp22/class/ee106b-aar/ros_workspaces/106B_final_project/src /home/cc/ee106b/sp22/class/ee106b-aar/ros_workspaces/106B_final_project/build /home/cc/ee106b/sp22/class/ee106b-aar/ros_workspaces/106B_final_project/build /home/cc/ee106b/sp22/class/ee106b-aar/ros_workspaces/106B_final_project/build/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/clean_test_results.dir/depend
 

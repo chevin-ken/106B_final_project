@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/cc/ee106b/sp22/class/ee106b-ace/ros_workspaces/final_project/src
+CMAKE_SOURCE_DIR = /home/cc/ee106b/sp22/class/ee106b-aar/ros_workspaces/106B_final_project/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/cc/ee106b/sp22/class/ee106b-ace/ros_workspaces/final_project/build
+CMAKE_BINARY_DIR = /home/cc/ee106b/sp22/class/ee106b-aar/ros_workspaces/106B_final_project/build
 
 # Utility rule file for tests.
 
@@ -67,6 +67,6 @@ CMakeFiles/tests.dir/clean:
 .PHONY : CMakeFiles/tests.dir/clean
 
 CMakeFiles/tests.dir/depend:
-	cd /home/cc/ee106b/sp22/class/ee106b-ace/ros_workspaces/final_project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/cc/ee106b/sp22/class/ee106b-ace/ros_workspaces/final_project/src /home/cc/ee106b/sp22/class/ee106b-ace/ros_workspaces/final_project/src /home/cc/ee106b/sp22/class/ee106b-ace/ros_workspaces/final_project/build /home/cc/ee106b/sp22/class/ee106b-ace/ros_workspaces/final_project/build /home/cc/ee106b/sp22/class/ee106b-ace/ros_workspaces/final_project/build/CMakeFiles/tests.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/cc/ee106b/sp22/class/ee106b-aar/ros_workspaces/106B_final_project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/cc/ee106b/sp22/class/ee106b-aar/ros_workspaces/106B_final_project/src /home/cc/ee106b/sp22/class/ee106b-aar/ros_workspaces/106B_final_project/src /home/cc/ee106b/sp22/class/ee106b-aar/ros_workspaces/106B_final_project/build /home/cc/ee106b/sp22/class/ee106b-aar/ros_workspaces/106B_final_project/build /home/cc/ee106b/sp22/class/ee106b-aar/ros_workspaces/106B_final_project/build/CMakeFiles/tests.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/tests.dir/depend
 

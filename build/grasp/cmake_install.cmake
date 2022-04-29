@@ -1,8 +1,8 @@
-# Install script for directory: /home/cc/ee106b/sp22/class/ee106b-ace/ros_workspaces/final_project/src/grasp
+# Install script for directory: /home/cc/ee106b/sp22/class/ee106b-aar/ros_workspaces/106B_final_project/src/grasp
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/cc/ee106b/sp22/class/ee106b-ace/ros_workspaces/final_project/install")
+  set(CMAKE_INSTALL_PREFIX "/home/cc/ee106b/sp22/class/ee106b-aar/ros_workspaces/106B_final_project/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,17 +33,17 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/cc/ee106b/sp22/class/ee106b-ace/ros_workspaces/final_project/build/grasp/catkin_generated/installspace/grasp.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/cc/ee106b/sp22/class/ee106b-aar/ros_workspaces/106B_final_project/build/grasp/catkin_generated/installspace/grasp.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/grasp/cmake" TYPE FILE FILES
-    "/home/cc/ee106b/sp22/class/ee106b-ace/ros_workspaces/final_project/build/grasp/catkin_generated/installspace/graspConfig.cmake"
-    "/home/cc/ee106b/sp22/class/ee106b-ace/ros_workspaces/final_project/build/grasp/catkin_generated/installspace/graspConfig-version.cmake"
+    "/home/cc/ee106b/sp22/class/ee106b-aar/ros_workspaces/106B_final_project/build/grasp/catkin_generated/installspace/graspConfig.cmake"
+    "/home/cc/ee106b/sp22/class/ee106b-aar/ros_workspaces/106B_final_project/build/grasp/catkin_generated/installspace/graspConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/grasp" TYPE FILE FILES "/home/cc/ee106b/sp22/class/ee106b-ace/ros_workspaces/final_project/src/grasp/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/grasp" TYPE FILE FILES "/home/cc/ee106b/sp22/class/ee106b-aar/ros_workspaces/106B_final_project/src/grasp/package.xml")
 endif()
 
