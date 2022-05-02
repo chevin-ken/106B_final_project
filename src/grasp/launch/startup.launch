@@ -3,6 +3,10 @@
     	<arg name="right_electric_gripper" value="true"/>
     </include>
 
+    <node pkg="baxter_tools" type="camera_control.py" name="camera_off" args="-c right_hand_camera"/>
+
+    <node pkg="baxter_tools" type="camera_control.py" name="camera_on" args="-o right_hand_camera -r 1280x800"/>
+
     <node name="joint_trajectory_action_server"
                 pkg="baxter_interface"
                 type="joint_trajectory_action_server.py">

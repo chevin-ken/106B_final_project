@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 
-
 try:
 	import rospy
 	import cv2
@@ -38,7 +37,7 @@ def take_images():
 	datapath = "data/"
 	object_name = "cube/"
 	start_index = 0
-	end_index = 1
+	end_index = 50
 	for i in range(start_index, end_index):
 		print("Image number {}".format(start_index))
 		light_image, dark_image = take_screenshots()
