@@ -74,7 +74,7 @@ def collect_data(baxter):
 	z_table = -0.25
 
 	datapath = "data/"
-	object_name = "allegra/"
+	object_name = "allegra_raw/"
 
 	#move to initial_postion 
 	print("Move gripper to initial position")
@@ -121,11 +121,15 @@ def collect_data(baxter):
 			print("Press enter to take dark image")
 			raw_input()
 			dark_image = baxter.get_image()
+			print(np.min(light_image), np.max(light_image))
+			print(np.min(dark_image), np.max(dark_image))
 
-			light_save_path = datapath + object_name + "light/{}.jpeg".format(count)
-			cv2.imwrite(light_save_path, light_image)
-			dark_save_path = datapath + object_name + "dark/{}.jpeg".format(count)
-			cv2.imwrite(dark_save_path, dark_image)
+			light_save_path = datapath + object_name + "light/{}.raw".format(count)
+			light_image.astype('int8').tofile(light_save_path)
+			# cv2.imwrite(light_save_path, light_image)
+			dark_save_path = datapath + object_name + "dark/{}.raw".format(count)
+			dark_image.astype('int8').tofile(dark_save_path) # save as raw images
+			# cv2.imwrite(dark_save_path, dark_image)
 
 			camera_pose = baxter.get_left_camera_pose()
 			camera_info_line = [count, camera_pose.translation.x,camera_pose.translation.y,camera_pose.translation.z,camera_pose.rotation.x,camera_pose.rotation.y,camera_pose.rotation.z,camera_pose.rotation.w]
@@ -133,11 +137,12 @@ def collect_data(baxter):
 		except Exception as e:
 			print(e)
 		count += 1
+	print(camera_lines)
 	camera_file_path = datapath + object_name + "camera_positions.txt"
 	with open(camera_file_path, "w+") as f:
 		for line in camera_lines:
 			f.write(str(line) + "\n")
-	f.close()
+		f.close()
 if __name__ == "__main__":
 	baxter = Baxter()
 	baxter.change_velocity(0.5)
