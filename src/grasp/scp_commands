@@ -1,12 +1,16 @@
 1. Send image files from lab computer to hive
-scp -r demo/ username@hivehost:~/whatever/
+scp -r -i ~/.ssh/id_rsa demo/ username@hivehost:~/whatever/
 
 2. Receive image files from hive to laptop
-scp -r username@hivehost:~/whatever/ ~/colmap_workspace
+scp -r -i ~/.ssh/id_rsa username@hivehost:~/whatever/ ~/colmap_workspace
 
 3. Send mesh output from laptop to hive
-scp ~/path_to_mesh username@hivehost:~/whatever/mesh_output
+scp -i ~/path_to_mesh username@hivehost:~/whatever/mesh_output
 
 4. Receive mesh output from hive to lab computer
-scp username@hivehost:~/whatever/mesh_output/mesh_file_name demo/
+scp -i username@hivehost:~/whatever/mesh_output/mesh_file_name demo/
 
+Automated SSH:
+1. Run this to generate ssh key: ssh-keygen -t rsa
+2. Copy ~/.ssh/id_rsa.pub
+3. Paste the contents to username@hivehost:~/.ssh/authorized_keys

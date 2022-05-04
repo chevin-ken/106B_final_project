@@ -108,12 +108,13 @@ class Baxter:
         self.left_planner.remove_obstacle("table")
 
     def calibrate_gripper(self):
-        self.left_gripper.calibrate()
+        self.right_gripper.calibrate()
 
     def __init__(self):
         self.image = None
 
         self.left_planner = PathPlanner("left_arm")
+        self.right_planner = PathPlanner("right_arm")
 
         rospy.init_node('Baxter')
         # self.remove_table_obstacle()
@@ -125,10 +126,10 @@ class Baxter:
         while(self.image == None):
             continue
 
-        self.left_gripper = robot_gripper.Gripper('left')
-        self.left_gripper.open()
+        self.right_gripper = robot_gripper.Gripper('left')
+        self.right_gripper.open()
 
-        self.left_gripper.calibrate()
+        self.right_gripper.calibrate()
         rospy.sleep(2.0)
 
         self.bridge = cv_bridge.CvBridge()
@@ -138,16 +139,19 @@ class Baxter:
         return self.bridge.imgmsg_to_cv2(self.image, desired_encoding="passthrough")
 
     def get_left_hand_pose(self):
-        return self.lookup_transform("base", "left_gripper").transform
+        return self.lookup_transform("base", "right_gripper").transform
 
     def get_left_camera_pose(self):
         return self.lookup_transform("base", "left_hand_camera").transform
 
     def close_gripper(self):
-        self.left_gripper.close()
+        self.right_gripper.close()
+        rospy.sleep(1.0)
 
     def open_gripper(self):
-        self.left_gripper.open()
+        self.right_gripper.open()
+        rospy.sleep(1.0)
+
 
     def rescan(self):
         raw_input("Press enter to scan again")
@@ -207,7 +211,7 @@ class Baxter:
         current_orientation = target_pose.orientation
         target_pose.position.x = target_pose.position.x + forward_amount
         orientation_constraint = OrientationConstraint()
-        orientation_constraint.link_name = "left_gripper"
+        orientation_constraint.link_name = "right_gripper"
         orientation_constraint.header.frame_id = "base"
         orientation_constraint.orientation = current_orientation
         orientation_constraint.absolute_x_axis_tolerance = .05
@@ -230,8 +234,6 @@ class Baxter:
             
     def test(self):
         return
-
-
 
 if __name__ == '__main__':
     b = Baxter()
